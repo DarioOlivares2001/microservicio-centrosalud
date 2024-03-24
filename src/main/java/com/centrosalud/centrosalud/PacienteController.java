@@ -45,11 +45,29 @@ public class PacienteController {
                         new HistorialMedico(8384, new Profesional("23659685-5", "Alan Garcia","Traumatologo"), 
                         Arrays.asList(new Dolencia("0000001", "CANSANCIO")),
                         llenarReceta("CANSANCIO", "PANADOL", "COCAINA", "PULSAR") ,
-                        LocalDateTime.of(2024, 1, 2, 3, 4)                                               
+                        LocalDateTime.of(2022, 1, 2, 3, 4)                                               
                         )
                         )
                 )
-            );            
+            );      
+            
+            
+        pacientes.add(new Paciente(2, "15874523-1", "Victor", "Olivares", "Saldaña", "+56925632521", 50, 
+        Arrays.asList(
+                        new HistorialMedico(5284, new Profesional("70256365-5", "Carlos Hernandez","Neurologia"), 
+                        Arrays.asList(new Dolencia("0000001", "Stress")),
+                        llenarReceta("Stress", "MELISA 2000", "DECONEC", "PROFAC1"),
+                        LocalDateTime.of(2024, 7, 8, 4, 5)                        
+                        )
+                        ,
+                        new HistorialMedico(8384, new Profesional("11356256-9", "Maria Morales","FISIATRA"), 
+                        Arrays.asList(new Dolencia("0000001", "DOLOR MUSCULAR")),
+                        llenarReceta("DOLOR MUSCULAR", "PANADOL", "TRAMADOL", "NAPROXENO") ,
+                        LocalDateTime.of(2023, 1, 2, 3, 4)                                               
+                        )
+                        )
+                )
+            );       
     }
 
     private Map<String, List<String>> llenarReceta(String dolencia, String medicamento1, String medicamento2,
