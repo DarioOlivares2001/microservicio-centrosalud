@@ -50,13 +50,7 @@ public class PacienteController {
                         )
                 )
             );            
-                
-
     }
-
-
-
-    /*Arrays.asList()*/
 
     private Map<String, List<String>> llenarReceta(String dolencia, String medicamento1, String medicamento2,
             String medicamento3) {
@@ -72,7 +66,7 @@ public class PacienteController {
     }
     
     @GetMapping("/pacientes/rut/{rut}")
-    public ResponseEntity<?> getPacienteXRut(@PathVariable String rut) {
+    public ResponseEntity<?> getPacienteByRut(@PathVariable String rut) {
         
         for(Paciente pac : pacientes){
             if(pac.getRut().equals(rut))
@@ -84,7 +78,7 @@ public class PacienteController {
     }
 
     @GetMapping("/pacientes/id/{id}")
-    public ResponseEntity<?> getPacienteId(@PathVariable int id) {
+    public ResponseEntity<?> getPacienteById(@PathVariable int id) {
         
         for(Paciente pac : pacientes){
             if(pac.getId() == id)
